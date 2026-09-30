@@ -1,0 +1,6 @@
+I have excluded the python venv files, to run the program you will have to execute the following:
+
+cd <path to folder holding the repo>
+python3 -m venv 03_fishing
+cd 03_fishing
+source bin/activate
