@@ -5,7 +5,6 @@ Run with:  python3 main.py
 """
 
 import pygame
-
 from game.game_engine import GameEngine
 from game.renderer import WINDOW_SIZE
 
@@ -19,10 +18,13 @@ def main():
 
     engine = GameEngine()
     running = True
+
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+
+            engine.handle_input(event)
 
         engine.update()
         engine.draw(screen, font)
